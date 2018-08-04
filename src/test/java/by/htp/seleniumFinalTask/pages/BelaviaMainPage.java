@@ -18,7 +18,8 @@ public class BelaviaMainPage extends AbstractPage {
 	@FindBy(xpath = "//*[@id='DestinationLocation_Combobox']")
 	private WebElement inputTo;
 	
-	@FindBy(xpath = "//*[@id='calendar']/div/div[1]/table/tbody/tr[1]/td[7]/a")
+//	4 August 2018
+	@FindBy(xpath = "//*[@id=\"calendar\"]/div/div[1]/table/tbody/tr[1]/td[6]/a")
 	private WebElement departureDate;
 	
 //	@FindBy(xpath = "//*[@id='step-2']/div[1]/div/label[1]")

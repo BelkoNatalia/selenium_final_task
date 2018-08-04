@@ -18,7 +18,7 @@ public class BelaviaTest {
 	@Test(description = "One side")
 	public void getListTickersOneSide() {
 		steps.fillFormBookFlightsOneWay("Минск", "Рига");
-		System.out.println("Run step");
+		steps.showTickets();
 	}
 
 	@AfterMethod(description = "Stop Browser")
