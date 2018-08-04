@@ -34,6 +34,18 @@ public class Steps {
 		belaviaMainPage.choseRadioButtonOneWay();
 		belaviaMainPage.search();
 	}
+	
+	public void fillFormBookFlightsReturn(String sityFrom, String sityTo) {
+		logger.info("--- Step: fillFormBookFlightsOneWay ---");
+		BelaviaMainPage belaviaMainPage = new BelaviaMainPage(driver);
+		belaviaMainPage.openPage();
+		belaviaMainPage.fillFieldFrom(sityFrom);
+		belaviaMainPage.fillFieldTo(sityTo);
+		belaviaMainPage.choseDepartoreDate();
+		belaviaMainPage.choseReturnDate();
+		belaviaMainPage.choseRadioButtonReturn();
+		belaviaMainPage.search();
+	}
 
 	public void showTickets() {
 		logger.info("--- Step: showTickets ---");

@@ -21,12 +21,15 @@ public class BelaviaMainPage extends AbstractPage {
 //	4 August 2018
 	@FindBy(xpath = "//*[@id=\"calendar\"]/div/div[1]/table/tbody/tr[1]/td[6]/a")
 	private WebElement departureDate;
-	
-//	@FindBy(xpath = "//*[@id='step-2']/div[1]/div/label[1]")
-//	private WebElement returnDate;
+//	4 August 2018	
+	@FindBy(xpath = "//*[@id=\"calendar\"]/div/div[1]/table/tbody/tr[1]/td[6]/a")
+	private WebElement returnDate;
 	
 	@FindBy(xpath = "//*[@id='step-2']/div[1]/div/label[1]")
 	private WebElement radioButtonOneWay;
+	
+	@FindBy(xpath = "//*[@id=\"step-2\"]/div[1]/div/label[2]")
+	private WebElement radioButtonReturn;
 	
 	@FindBy(xpath = "//*[@id='step-2']/div[4]/div/button")
 	private WebElement buttonSearch;	
@@ -65,9 +68,25 @@ public class BelaviaMainPage extends AbstractPage {
 		logger.info("Departure date was choosen.");
 	}
 	
+	public void choseReturnDate() {
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		returnDate.click();
+		logger.info("Return date was choosen.");
+	}
+	
 	public void choseRadioButtonOneWay() {
 		radioButtonOneWay.click();
 		logger.info("Radio button One-Way was choosen.");
+	}
+	
+	public void choseRadioButtonReturn() {
+		radioButtonReturn.click();
+		logger.info("Radio button Return was choosen.");
 	}
 	
 	public void search() {

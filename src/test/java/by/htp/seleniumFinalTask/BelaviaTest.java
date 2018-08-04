@@ -20,6 +20,12 @@ public class BelaviaTest {
 		steps.fillFormBookFlightsOneWay("Минск", "Рига");
 		steps.showTickets();
 	}
+	
+	@Test(description = "Return")
+	public void getListTickersReturn() {
+		steps.fillFormBookFlightsReturn("Минск", "Рига");
+		steps.showTickets();
+	}
 
 	@AfterMethod(description = "Stop Browser")
 	public void stopBrowser() {
